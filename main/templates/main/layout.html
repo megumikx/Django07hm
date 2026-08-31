@@ -1,0 +1,37 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Cinema{% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+          href="{% static 'main/css/main.css' %}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">CINEMA</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/movies/">Movies</a>
+        <a href="/bookings/">Bookings</a>
+    </nav>
+</header>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

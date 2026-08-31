@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0f0f14;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 80px;
+    padding: 0 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #15151d;
+    border-bottom: 1px solid #292936;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+}
+
+.navbar nav a {
+    color: #bdbdc8;
+    text-decoration: none;
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: white;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #29213d 0%,
+            #171720 45%,
+            #0f0f14 80%
+        );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+
+/* TEXT */
+
+.subtitle {
+    color: #9b6cff;
+    font-size: 15px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 80px;
+    font-weight: 800;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 25px;
+}
+
+.description {
+    color: #b7b7c2;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+
+/* BUTTONS */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.primary {
+    background: #8b5cf6;
+    color: white;
+}
+
+.primary:hover {
+    background: #7445d6;
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+.secondary {
+    background: transparent;
+    color: white;
+
+    border: 1px solid #555563;
+}
+
+.secondary:hover {
+    background: #252531;
+    color: white;
+
+    transform: translateY(-2px);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 0 20px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 220px;
+    }
+}
