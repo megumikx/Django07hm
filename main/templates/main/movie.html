@@ -47,7 +47,7 @@
 
         {% if movie.seats > 0 %}
 
-            <a href="#" class="movie-button">
+            <a href="{% url 'booking' movie.id %}" class="movie-button">
                 Book ticket
             </a>
 

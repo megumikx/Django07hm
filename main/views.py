@@ -9,6 +9,11 @@ def index(request):
 def about(request):
     return render(request, 'main/about.html')
 
+class BookingView(View):
+    def get(self, request, movie_id):
+        return render(request, 'main/booking.html')
+
+
 
 class MoviesView(View):
 

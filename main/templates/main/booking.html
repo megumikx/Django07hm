@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>{% extends 'main/layout.html' %}
+
+{% block title %}
+Booking
+{% endblock %}
+
+{% block content %}
+
+<div class="booking-page">
+
+    <div class="booking-card">
+
+        <p class="subtitle">RESERVE YOUR TICKETS</p>
+
+        <h1>Book a Ticket</h1>
+
+        <p class="booking-description">
+            Fill in the form below to reserve your seats.
+        </p>
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            <div class="form-group">
+
+                <label for="name">
+                    Your name
+                </label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="Enter your name"
+                >
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="tickets">
+                    Number of tickets
+                </label>
+
+                <input
+                    type="number"
+                    id="tickets"
+                    name="tickets"
+                    min="1"
+                    placeholder="Enter number of tickets"
+                >
+
+            </div>
+
+            <button type="submit" class="booking-button">
+                Book Tickets
+            </button>
+
+        </form>
+
+        <a href="{% url 'movies' %}" class="back-button">
+            ← Back to movies
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

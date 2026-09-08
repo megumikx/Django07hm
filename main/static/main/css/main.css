@@ -659,3 +659,167 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+
+/* BOOKING PAGE */
+
+.booking-page {
+    min-height: calc(100vh - 80px);
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    background:
+        radial-gradient(circle at center, #29213d 0%, #171720 45%, #0f0f14 80%);
+}
+
+.booking-card {
+    width: 700px;
+    padding: 55px;
+
+    background: linear-gradient(145deg, #1d1b2b, #14131d);
+
+    border: 1px solid #302d42;
+    border-radius: 22px;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.booking-card h1 {
+    margin: 15px 0 15px;
+
+    color: white;
+    font-size: 52px;
+    font-weight: 800;
+}
+
+.booking-description {
+    margin-bottom: 40px;
+
+    color: #aaa8b8;
+    font-size: 16px;
+}
+
+
+/* FORM */
+
+.booking-card form {
+    margin-top: 20px;
+}
+
+.booking-card .form-group {
+    margin-bottom: 25px;
+}
+
+.booking-card label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #d0cedb;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.booking-card input {
+    width: 100%;
+    padding: 14px 16px;
+
+    box-sizing: border-box;
+
+    background: #12111a;
+
+    border: 1px solid #302d42;
+    border-radius: 9px;
+
+    color: white;
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.booking-card input::placeholder {
+    color: #777486;
+}
+
+.booking-card input:focus {
+    border-color: #8b5cf6;
+
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+}
+
+
+/* BUTTON */
+
+.booking-button {
+    width: 100%;
+
+    padding: 14px 22px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #8b5cf6;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.booking-button:hover {
+    background: #7c4ee8;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.25);
+}
+
+
+/* BACK BUTTON */
+
+.booking-card .back-button {
+    display: inline-block;
+
+    margin-top: 25px;
+
+    color: #aaa8b8;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.booking-card .back-button:hover {
+    color: white;
+
+    text-decoration: none;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .booking-page {
+        padding: 50px 20px;
+    }
+
+    .booking-card {
+        padding: 35px 25px;
+    }
+
+    .booking-card h1 {
+        font-size: 40px;
+    }
+}
