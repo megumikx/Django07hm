@@ -1,0 +1,70 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+{{ movie.title }}
+{% endblock %}
+
+{% block content %}
+
+<div class="movie-detail-page">
+
+    <div class="movie-detail-card">
+
+        <span class="movie-genre">
+            {{ movie.genre }}
+        </span>
+
+        <h1>{{ movie.title }}</h1>
+
+        <div class="movie-detail-info">
+
+            <div>
+                <span class="info-label">DURATION</span>
+                <span>{{ movie.duration }} min</span>
+            </div>
+
+            <div>
+                <span class="info-label">AGE RATING</span>
+                <span>{{ movie.age_rating }}+</span>
+            </div>
+
+            <div>
+                <span class="info-label">AVAILABLE SEATS</span>
+
+                {% if movie.seats > 0 %}
+                    <span class="available">
+                        {{ movie.seats }}
+                    </span>
+                {% else %}
+                    <span class="sold-out">
+                        SOLD OUT
+                    </span>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        {% if movie.seats > 0 %}
+
+            <a href="#" class="movie-button">
+                Book ticket
+            </a>
+
+        {% else %}
+
+            <div class="sold-out-message">
+                Tickets are sold out
+            </div>
+
+        {% endif %}
+
+        <a href="{% url 'movies' %}" class="back-button">
+            ← Back to movies
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

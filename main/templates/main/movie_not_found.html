@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Movie not found
+{% endblock %}
+
+{% block content %}
+
+<div class="movie-page">
+
+    <h1>Movie not found</h1>
+
+    <p>
+        Sorry, this movie does not exist.
+    </p>
+
+    <a href="{% url 'movies' %}">
+        Back to movies
+    </a>
+
+</div>
+
+{% endblock %}

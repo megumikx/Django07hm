@@ -1,0 +1,86 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+Movies
+{% endblock %}
+
+{% block content %}
+
+<div class="movies-page">
+
+    <div class="movies-header">
+
+        <p class="subtitle">DISCOVER</p>
+
+        <h1>Movies</h1>
+
+        <p>
+            Choose your favorite movie and book your tickets.
+        </p>
+
+    </div>
+
+
+    <div class="movies-container">
+
+        {% for movie in films %}
+
+        <div class="movie-card">
+
+            <div class="movie-card-content">
+
+                <span class="movie-genre">
+                    {{ movie.genre }}
+                </span>
+
+                <h2>
+                    {{ movie.title }}
+                </h2>
+
+                <div class="movie-info">
+
+                    <span>
+                        🎬 {{ movie.duration }} min
+                    </span>
+
+                    <span>
+                         {{ movie.age }}
+                    </span>
+
+                </div>
+
+
+                <div class="seats">
+
+                    {% if movie.seats > 0 %}
+
+                        <span class="available">
+                            {{ movie.seats }} seats available
+                        </span>
+
+                    {% else %}
+
+                        <span class="sold-out">
+                            SOLD OUT
+                        </span>
+
+                    {% endif %}
+
+                </div>
+
+
+               <a href="{% url 'movie' movie.id %}" class="movie-button">
+                    View details
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}
