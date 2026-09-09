@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>{% extends 'main/layout.html' %}
+{% extends 'main/layout.html' %}
 
 {% block title %}
 Booking
@@ -22,6 +13,27 @@ Booking
         <p class="subtitle">RESERVE YOUR TICKETS</p>
 
         <h1>Book a Ticket</h1>
+
+        <h2>{{ movie.title }}</h2>
+
+        <p class="available-seats">
+            Available seats: {{ movie.seats }}
+        </p>
+
+        {% if success %}
+            <div class="booking-success">
+                <h3>Booking successful!</h3>
+                <p>Movie: {{ movie.title }}</p>
+                <p>Client: {{ name }}</p>
+                <p>Tickets: {{ tickets }}</p>
+            </div>
+        {% endif %}
+
+        {% if error %}
+            <div class="booking-error">
+                {{ error }}
+            </div>
+        {% endif %}
 
         <p class="booking-description">
             Fill in the form below to reserve your seats.
